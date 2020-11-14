@@ -113,9 +113,6 @@ $RECYCLE.BIN/
 *.css.map
 
 
-### Less ###
-*.css
-
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
 .tmp/
 
