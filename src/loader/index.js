@@ -1,1 +1,5 @@
-console.log('hi')
+function log () {
+  console.log('hi')
+}
+
+log()
