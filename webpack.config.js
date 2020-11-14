@@ -12,7 +12,8 @@ module.exports = [
       new HtmlWebpackPlugin({
         template: 'src/loader/files-template.js',
         filename: '../src/loader/files.js',
-        inject: false
+        inject: false,
+        publicPath: ''
       })
     ],
     module: {
