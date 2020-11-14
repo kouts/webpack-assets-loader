@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = [
   {
-    name: 'main',
-    entry: './src/app/index.js',
+    name: 'app',
+    entry: './src/app/app.js',
     output: {
-      filename: 'bundle.js',
+      filename: '[name].js',
       path: path.resolve(__dirname, 'dist')
     },
     plugins: [
@@ -33,13 +33,24 @@ module.exports = [
           use: ['style-loader', 'css-loader']
         }
       ]
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all'
+          }
+        }
+      }
     }
   },
   {
     name: 'loader',
-    entry: './src/loader/index.js',
+    entry: './src/loader/loader.js',
     output: {
-      filename: 'loader.js',
+      filename: '[name].js',
       path: path.resolve(__dirname, 'dist')
     },
     module: {

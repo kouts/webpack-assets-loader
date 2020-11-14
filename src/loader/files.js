@@ -1,1 +1,1 @@
-export default ['dist/bundle.js']
+export default ['dist/vendors.js', 'dist/main.js']
