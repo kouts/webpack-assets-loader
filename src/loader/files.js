@@ -1,1 +1,1 @@
-export default ['dist/vendors.js', 'dist/main.js']
+export default ['dist/runtime.js', 'dist/vendors-d2eb5610.js', 'dist/vendors-fcf017cf.js', 'dist/vendors-b63e7516.js', 'dist/vendors-0ac0411d.js', 'dist/vendors-0bc0478e.js', 'dist/main.js']

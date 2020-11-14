@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = [
   {
-    name: 'app',
     entry: './src/app/app.js',
     output: {
       filename: '[name].js',
@@ -35,7 +34,9 @@ module.exports = [
       ]
     },
     optimization: {
+      runtimeChunk: 'single',
       splitChunks: {
+        maxSize: 300000,
         cacheGroups: {
           commons: {
             test: /[\\/]node_modules[\\/]/,
@@ -47,10 +48,9 @@ module.exports = [
     }
   },
   {
-    name: 'loader',
     entry: './src/loader/loader.js',
     output: {
-      filename: '[name].js',
+      filename: 'loader.js',
       path: path.resolve(__dirname, 'dist')
     },
     module: {
