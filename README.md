@@ -1,2 +1,2 @@
-# webpack-loader
-Webpack loader example project
+# webpack-assets-loader
+Webpack assets loader example project
