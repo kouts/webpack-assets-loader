@@ -1,1 +1,1 @@
-export default ["runtime.js","vendors-fcf017cf.js","vendors-ba5cce0a.js","vendors-b63e7516.js","vendors-0ac0411d.js","vendors-3e3507c7.js","main.js","main.css"]
+export default ["vendors-fcf017cf.js","vendors-ba5cce0a.js","vendors-b63e7516.js","vendors-0ac0411d.js","vendors-3e3507c7.js","main.js","main.css"]

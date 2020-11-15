@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `
   document.querySelector('#app').insertAdjacentHTML('beforeend', template)
-  load(files.shift()).then(() => {
-    setTimeout(() => {
-      Promise.all(files.map(o => load(o)))
-    }, 2500)
-  })
+
+  setTimeout(() => {
+    Promise.all(files.map(o => load(o)))
+  }, 2500) 
 })

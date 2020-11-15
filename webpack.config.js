@@ -42,7 +42,7 @@ module.exports = [
       ]
     },
     optimization: {
-      runtimeChunk: 'single',
+      // runtimeChunk: 'single',
       splitChunks: {
         maxSize: 300000,
         cacheGroups: {
