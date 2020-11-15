@@ -1,4 +1,5 @@
 const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = [
@@ -9,6 +10,9 @@ module.exports = [
       path: path.resolve(__dirname, 'dist')
     },
     plugins: [
+      new CleanWebpackPlugin({
+        cleanOnceBeforeBuildPatterns: ['**/*', '!favicon.ico', '!index.html', '!loader.js']
+      }),
       new HtmlWebpackPlugin({
         template: 'src/loader/files-template.js',
         filename: '../src/loader/files.js',
