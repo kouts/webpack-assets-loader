@@ -7,15 +7,15 @@ const template = (title, date) => `
     <div class="container">
       <h1>${title}</h1>
       <p class="lead">
-        This is the landing page of the application...
+        All JavaScript and CSS assets are loaded dynamically into the page.
       </p>
-      <p>${date}</p>
+      <p class="date">${date}</p>
     </div>
   </section>
 `
 function component () {
   const element = document.createElement('div')
-  const title = _.join(['Welcome', 'to the app'], ' ')
+  const title = _.join(['Welcome to the ', 'webpack assets loader example application'], ' ')
   const date = moment().format('MMMM Do YYYY, h:mm:ss a')
   element.innerHTML = template(title, date)
   return element
