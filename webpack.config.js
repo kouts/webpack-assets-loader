@@ -13,7 +13,7 @@ module.exports = [
     plugins: [
       new MiniCssExtractPlugin(),
       new CleanWebpackPlugin({
-        cleanOnceBeforeBuildPatterns: ['**/*', '!favicon.ico', '!index.html', '!loader.js']
+        cleanOnceBeforeBuildPatterns: ['**/*', '!favicon.ico', '!index.html', '!loader.js', '!*.png']
       }),
       new HtmlWebpackPlugin({
         template: 'src/loader/files-template.js',
@@ -63,6 +63,10 @@ module.exports = [
     },
     module: {
       rules: [
+        {
+          test: /\.html$/i,
+          loader: 'html-loader'
+        },
         {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,

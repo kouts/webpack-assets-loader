@@ -6,7 +6,7 @@ const template = (title, date) => `
   <section class="jumbotron text-center">
     <div class="container">
       <div>
-        <img src="webpack-assets-loader.png" alt="Webpack assets loader" />
+        <img src="logo-page.png" alt="Webpack assets loader" />
       </div>
       <h1>${title}</h1>
       <p class="lead">
