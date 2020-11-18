@@ -1,12 +1,13 @@
 import _ from 'lodash'
 import moment from 'moment'
 import './style.css'
+import img from './logo-page.png'
 
 const template = (title, date) => `
   <section class="jumbotron text-center">
     <div class="container">
       <div>
-        <img src="logo-page.png" alt="Webpack assets loader" />
+        <img src="${img}" alt="Webpack assets loader" />
       </div>
       <h1>${title}</h1>
       <p class="lead">
