@@ -36,7 +36,6 @@ module.exports = [
         },
         {
           test: /\.css$/i,
-          // use: ['style-loader', 'css-loader']
           use: [MiniCssExtractPlugin.loader, 'css-loader']
         },
         {
@@ -68,10 +67,6 @@ module.exports = [
     module: {
       rules: [
         {
-          test: /\.html$/i,
-          loader: 'html-loader'
-        },
-        {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,
           use: {
@@ -82,8 +77,8 @@ module.exports = [
           }
         },
         {
-          test: /\.css$/i,
-          use: ['style-loader', 'css-loader']
+          test: /\.html$/i,
+          loader: 'html-loader'
         },
         {
           test: /\.png/,
